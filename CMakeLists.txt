@@ -89,7 +89,6 @@ cmake_policy(SET CMP0028 NEW)
 find_package(PCL REQUIRED)
 add_definitions(${PCL_DEFINITIONS})
 include_directories(${PCL_INCLUDE_DIRS})
-link_directories(${PCL_LIBRARY_DIRS})
 
 # # # # # # # # # # # # # # # # # CHANGE BELOW  # # # # # # # # # # # # # # # # 
 #find_package(Qt5.... REQUIRED)
@@ -135,6 +134,7 @@ set(
 link_directories(
 	${CMAKE_ARCHIVE_OUTPUT_DIRECTORY}
 	${CMAKE_LIBRARY_OUTPUT_DIRECTORY}
+	# ${PCL_LIBRARY_DIRS}
 )
 
 set(
